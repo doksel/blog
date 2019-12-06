@@ -1,10 +1,32 @@
-const express = require("express");
+import express from "express";
+import path from "path";
+import cors from 'cors';
+import {makeExecutableSchema} from 'graphql-tools';
+import {ApolloServer, gql} from 'apollo-server-express';
+
+import typeDefs from './modelsGraphql/schema.gql';
+import resolvers from './resolvers';
+import {endpoint} from './config'
+
+const schema = new ApolloServer({
+    typeDefs, resolvers
+});
+
+const app = express();
+const router = express.Router();
+
+schema.applyMiddleware({ app });
+
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
+router.all(endpoint, (req, res) => {
+
+});
+
 // const morgan = require("morgan");
-const path = require("path");
 // const dotenv = require("dotenv");
-
-const app = express();  
-
 // dotenv.config();
 
 // app.set("views", path.join(__dirname, "views"));
@@ -25,4 +47,4 @@ app.get("*", (req, res) => {
     res.send('hello'); // for test
 });
 
-module.exports = app;
+export default app;
