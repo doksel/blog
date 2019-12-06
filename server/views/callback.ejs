@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Loading...</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Login Successful</h1>
+    <!-- <p>access_token <%= access_token %></p> -->
+  </body>
+  <script>
+    var access_token = "<%= access_token  %>";
+    var email = "<%= email  %>";
+    var id = "<%= id  %>";
+    window.opener.postMessage({ 'type': 'access_token', 'access_token': access_token, email: email || null, id: id || null }, '*');
+    window.close();
+  </script>
+</html>
