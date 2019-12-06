@@ -1,0 +1,15 @@
+{
+  "extends": ["airbnb-base", "prettier"],
+  "rules": {
+    "indent": [2, 4],
+    "brace style": [2, "1tbs"],
+    "no unused vars": [1],
+    "no underscore-dangle": 0,
+    "camelcase": 0,
+    "no-console": 0
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}
