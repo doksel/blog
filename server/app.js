@@ -1,10 +1,11 @@
 const express = require("express");
 // const morgan = require("morgan");
 const path = require("path");
-const dotenv = require("dotenv");
-const app = express();
+// const dotenv = require("dotenv");
 
-dotenv.config();
+const app = express();  
+
+// dotenv.config();
 
 // app.set("views", path.join(__dirname, "views"));
 // app.set("view engine", "ejs");
@@ -20,7 +21,8 @@ dotenv.config();
 app.use(express.static(path.resolve(__dirname, "..", "build")));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "..", "build", "index.html"));
+    // res.sendFile(path.resolve(__dirname, "..", "build", "index.html"));
+    res.send('hello'); // for test
 });
 
 module.exports = app;

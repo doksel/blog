@@ -1,9 +1,8 @@
-// server/index.js
+// const app = require('./app');
+import app from './app';
+import {port} from './config';
 
-const app = require('./app');
-
-const PORT = process.env.PORT || 9000;
-//const PORT = process.env.PORT || 8000;
+const PORT = port || 8000;
 
 app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}!`);
