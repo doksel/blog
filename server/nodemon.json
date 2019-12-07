@@ -10,6 +10,6 @@
   "execMap": {
     "js": "babel-node"
   },
-  "ext": ".js,.json,.GQL",
+  "ext": ".js,.json,.gql",
   "watch": "./"
 }

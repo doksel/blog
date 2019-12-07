@@ -1,29 +1,21 @@
 import express from "express";
 import path from "path";
 import cors from 'cors';
-import {makeExecutableSchema} from 'graphql-tools';
-import {ApolloServer, gql} from 'apollo-server-express';
+import { ApolloServer, gql } from 'apollo-server-express';
 
 import typeDefs from './modelsGraphql/schema.gql';
 import resolvers from './resolvers';
 import {endpoint} from './config'
 
-const schema = new ApolloServer({
-    typeDefs, resolvers
-});
-
 const app = express();
-const router = express.Router();
 
-schema.applyMiddleware({ app });
+const server = new ApolloServer({ typeDefs, resolvers });
+server.applyMiddleware({ app, path: endpoint });
 
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-router.all(endpoint, (req, res) => {
-
-});
 
 // const morgan = require("morgan");
 // const dotenv = require("dotenv");
