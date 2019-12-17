@@ -1,0 +1,19 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["react", "jsx-ally", "import"],
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "indent": [2],
+    "brace style": [2, "1tbs"],
+    "comma-spacing": 1,
+    "no unused vars": [1],
+    "no underscore-dangle": 0,
+    "camelcase": 0,
+    "no-console": 0
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}
