@@ -3,8 +3,15 @@
   "extends": ["airbnb", "prettier"],
   "plugins": ["react", "jsx-ally", "import"],
   "rules": {
+<<<<<<< HEAD
     "indent": [2],
     "brace style": [2, "1tbs"],
+=======
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "indent": [2],
+    "brace style": [2, "1tbs"],
+    "comma-spacing": 1,
+>>>>>>> 76f0efb88d5aae73c259e2b3426492ab5296c5aa
     "no unused vars": [1],
     "no underscore-dangle": 0,
     "camelcase": 0,
