@@ -6,12 +6,12 @@ import "./index.scss";
 export default () => (
   <ul className="red">
     <li>
-      <Link href="/a" as="/FirstPage">
+      <Link href="/FirstPage" as="/first-page">
         <a>first link</a>
       </Link>
     </li>
     <li>
-      <Link href="/b" as="/SecondPage">
+      <Link href="/SecondPage" as="/second-page">
         <a>second link</a>
       </Link>
     </li>
