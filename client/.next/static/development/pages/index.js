@@ -9786,17 +9786,17 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   return __jsx("ul", {
     className: "red"
   }, __jsx("li", null, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/a",
-    as: "/FirstPage"
+    href: "/FirstPage",
+    as: "/first-page"
   }, __jsx("a", null, "first link"))), __jsx("li", null, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/b",
-    as: "/SecondPage"
+    href: "/SecondPage",
+    as: "/second-page"
   }, __jsx("a", null, "second link"))));
 });
 
 /***/ }),
 
-/***/ 0:
+/***/ 1:
 /*!***********************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2Fhome%2Fpc%2FProjects%2Fmy-app%2Fclient%2Fsrc%2Fpages%2Findex.js ***!
   \***********************************************************************************************************************************/
@@ -9819,5 +9819,5 @@ module.exports = dll_5f137288facb1107b491;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js","styles"]]]);
+},[[1,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map
