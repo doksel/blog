@@ -7,6 +7,7 @@ import { HttpLink } from 'apollo-link-http'
 import fetch from 'isomorphic-unfetch'
 
 let apolloClient = null
+console.log(apolloClient);
 
 /**
  * Creates and provides the apolloContext
@@ -129,7 +130,7 @@ function createApolloClient(initialState = {}) {
     ssrMode: typeof window === 'undefined', // Disables forceFetch on the server (so queries are only run once)
     link: new HttpLink({
       // uri: 'https://api.graph.cool/simple/v1/cixmkt2ul01q00122mksg82pn', // Server URL (must be absolute)
-      uri: 'http://lcalhost:3003/graphql',
+      uri: 'http://localhost:3003/graphql',
       credentials: 'same-origin', // Additional fetch() options like `credentials` or `headers`
       fetch,
     }),

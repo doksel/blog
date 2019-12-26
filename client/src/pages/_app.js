@@ -18,7 +18,7 @@ export default withApollo(withRedux(initStore)(
 
     render() {
       const { Component, pageProps, store, apolloClient } = this.props
-
+      
       return (
         <ApolloProvider client={apolloClient}>
           <Provider store={store}>
