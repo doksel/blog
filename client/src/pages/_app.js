@@ -3,8 +3,10 @@ import { Provider } from 'react-redux'
 import App from 'next/app'
 import withRedux from 'next-redux-wrapper'
 import initStore from '../libs/store'
+import { withApollo } from '../libs/apollo'
+import { ApolloProvider } from 'react-apollo';
 
-export default withRedux(initStore)(
+export default withApollo(withRedux(initStore)(
   class MyApp extends App {
     static async getInitialProps({ Component, ctx }) {
       return {
@@ -15,12 +17,15 @@ export default withRedux(initStore)(
     }
 
     render() {
-      const { Component, pageProps, store } = this.props
+      const { Component, pageProps, store, apolloClient } = this.props
+
       return (
-        <Provider store={store}>
-          <Component {...pageProps} />
-        </Provider>
+        <ApolloProvider client={apolloClient}>
+          <Provider store={store}>
+            <Component {...pageProps}/>
+          </Provider>
+        </ApolloProvider>
       )
     }
   }
-)
+))
