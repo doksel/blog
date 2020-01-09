@@ -1,8 +1,26 @@
 {
   "parser": "babel-eslint",
-  "extends": ["airbnb", "prettier"],
-  "plugins": ["react", "jsx-ally", "import"],
+  "settings": {
+    "import/resolver": "webpack",
+    "react": {
+      "createClass": "createReactClass",
+      "pragma": "React",
+      "version": "16.5.1"
+    },
+    "propWrapperFunctions": ["forbidExtraProps"],
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": false
+    }
+  },
+  "extends": [
+    "react-app",
+    "plugin:prettier/recommended",
+    "plugin:flowtype/recommended",
+    "airbnb",
+    "prettier"
+  ],
   "rules": {
+<<<<<<< HEAD
 <<<<<<< HEAD
     "indent": [2],
     "brace style": [2, "1tbs"],
@@ -16,9 +34,23 @@
     "no underscore-dangle": 0,
     "camelcase": 0,
     "no-console": 0
+=======
+    "jsx-a11y/href-no-hash": "off",
+    "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["invalidHref"] }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "import/no-extraneous-dependencies": 0,
+    "flowtype/no-types-missing-file-annotation": 0,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   },
-  "env": {
-    "browser": true,
-    "node": true
-  }
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "ecmaFeatures": {
+      "experimentalDecorators": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+>>>>>>> c6a906791810c1f20370ef5877d1c8509c2e63d9
+  },
+  "plugins": ["eslint-plugin-react", "flowtype"]
 }

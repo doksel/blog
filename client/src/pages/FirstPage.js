@@ -18,7 +18,7 @@ class FirstPage extends Component {
 
     return (
       <div>
-        <div>first page</div>
+        <h1>first page</h1>
         <div>Hello - {hi}</div>
       </div>
     )
