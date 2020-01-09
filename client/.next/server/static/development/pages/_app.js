@@ -3591,7 +3591,10 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 
 let apolloClient = null;
+<<<<<<< HEAD
 console.log(apolloClient);
+=======
+>>>>>>> 7031acc193691ef4e2b4d4c5a24a9d1a2f373b4c
 /**
  * Creates and provides the apolloContext
  * to a next.js PageTree. Use it by wrapping
